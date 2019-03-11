@@ -15,14 +15,14 @@ else
     exit 1
 }
 
-if ($env:VCPKG_ROOT) 
+if ($env:VCPKG_INSTALLATION_ROOT) 
 {
-    Write-Host "The VCPKG_ROOT environment variable is set"
-    Write-Host $env:VCPKG_ROOT
+    Write-Host "The VCPKG_INSTALLATION_ROOT environment variable is set"
+    Write-Host $env:VCPKG_INSTALLATION_ROOT
 }
 else
 {
-    Write-Host "The VCPKG_ROOT environment variable is not set"
+    Write-Host "The VCPKG_INSTALLATION_ROOT environment variable is not set"
     exit 1
 }
 
@@ -41,7 +41,7 @@ $Description = @"
 _Version:_ $VcpkgVersion<br/>
 _Environment:_
 * PATH: contains location of the vcpkg directory
-* VCPKG_ROOT: root directory of the vcpkg installation
+* VCPKG_INSTALLATION_ROOT: root directory of the vcpkg installation
 "@
 
 Add-SoftwareDetailsToMarkdown -SoftwareName $SoftwareName -DescriptionMarkdown $Description

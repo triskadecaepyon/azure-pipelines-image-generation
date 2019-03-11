@@ -19,4 +19,4 @@ Invoke-Expression "$InstallDir\$VcpkgExecPath integrate install"
 # Add vcpkg to system environment
 Add-MachinePathItem $InstallDir
 $env:Path = Get-MachinePath
-setx VCPKG_ROOT $InstallDir /M
+setx VCPKG_INSTALLATION_ROOT $InstallDir /M
